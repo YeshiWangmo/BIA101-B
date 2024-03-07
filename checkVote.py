@@ -14,7 +14,7 @@ userinput = input("Please type your age:")
 userAge= int(userinput)
 
 #3 check if user can vote 
-if userAge > 18:
+if userAge >=18:
     print("You can vote") 
 else:
     print("You cannot vote")
