@@ -1,38 +1,41 @@
-# ! STRING MANIPULATION
+## A - 4
+# o - 0
+# e - 3
+# l - 1
+# s - 5
+# g - 9
+# b - 6
+# t - 7
+# z - 2
 
-# ! string concatenation
-string1 = "2"
-string2 = "3"
+# Dechen - D3ch3n
+# hello - h3110
+# Tshewang = 75h3w4n9
 
-combined = string1 + string2
-combined1 = "hi" + " " + "there"
+# ! LOOPS
 
-print('String Concatenation')
-print(combined)
-print(combined1)
-
-# ! string interpolation
-print('String Interpolation')
-# ! how do you print "john is 30 years of age"
-name = "John"
-age = 99
-interpolated = f"John is {age} years of age"
-print(interpolated)
-
-# ! string methods
-print('String Methods')
-# # ! upper
-print('String upper')
-stringlower = 'hello how are you'
-converted =  stringlower.upper()
-converted1 = "pure string".upper()
-
-# ! lower
-print('String lower')
-lower = "HELLO".lower()
-print(lower)
-
-# # ! capitalize
-print('String capitalize')
-capitalize = "hello there".capitalize()
-print(capitalize)
+result = ""
+testName = "Tshewang"
+for char in testName:
+    if char == "A":
+        result += "4"
+    elif char == "o":
+        result += "0"
+    elif char == "e":
+        result += "3"
+    elif char == "l":
+        result += "1"
+    elif char == "s":
+        result = result + "5"
+    elif char == "g":
+        result += "9"
+    elif char == "b":
+        result += "6"
+    elif char == "t":
+        result += "7"
+    elif char == "z":
+        result += "2"
+    else:
+        result = result + char
+    
+print(result)
