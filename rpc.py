@@ -65,3 +65,61 @@ score = 0
 for line in lines:
     score = score + perm_to_score[line]
 print('Score using dict', score)
+
+
+
+
+
+
+# Reading input.txt file and putting it into an array
+with open("input.txt") as f:
+    lines = f.readlines()
+
+lines = [x.strip() for x in lines]
+
+# Printing the first 10 lines for verification
+print(lines[0:10])
+
+# Using Arrays
+score_array = 0
+for line in lines:
+    if line == "A X":
+        score_array += 4
+    elif line == "A Y":
+        score_array += 1
+    elif line == "A Z":
+        score_array += 7
+    elif line == "B X":
+        score_array += 8
+    elif line == "B Y":
+        score_array += 5
+    elif line == "B Z":
+        score_array += 2
+    elif line == "C X":
+        score_array += 3
+    elif line == "C Y":
+        score_array += 9
+    elif line == "C Z":
+        score_array += 6
+
+print('Score using array:', score_array)
+
+# Using Dictionaries
+perm_to_score = {
+    "A X": 4,
+    "A Y": 1,
+    "A Z": 7,
+    "B X": 8,
+    "B Y": 5,
+    "B Z": 2,
+    "C X": 3,
+    "C Y": 9,
+    "C Z": 6
+}
+
+score = 0
+for line in lines:
+    # Ensure the line is in the correct format to match the dictionary keys
+    score += perm_to_score.get(line, 0) # Using get() to avoid KeyError if line is not in the dictionary
+
+print('Score using dict:', score)
