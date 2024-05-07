@@ -1,6 +1,6 @@
 class person: # the parent class
     #assigning attributes
-    def init (self, name,age,CID):
+    def __init__(self, name,age,CID):
         self.name= name
         self.age= age
         self.CID= CID
@@ -19,8 +19,8 @@ class person: # the parent class
         print(self.name,"is eating")
 
 class Teacher(person):
-    def init(self,name,age,CID,subject, salary, department, designation):
-        super.init(name,age,CID)
+    def __init__(self,name,age,CID,subject, salary, department, designation):
+        super().__init__(name, age, CID)
         self.subject= subject
         self.salary= salary
         self.department= department
@@ -39,8 +39,8 @@ class Teacher(person):
 
 
 class Student(person):
-    def init(self,name,age,CID,std_id, course, year, gpa):
-        super.init(name,age,CID)
+    def __init__(self,name,age,CID,std_id, course, year, gpa):
+        super().__init__(name, age, CID) 
         self.std_id= std_id
         self.course= course
         self.year= year
@@ -56,8 +56,8 @@ class Student(person):
         print(self.name,"is writing exam")
 
     
-# t1= Teacher("tashi", 30, 12345, "accounts", 30000, "commerce","assistant teacher")
-# t2= Teacher("dorji", 31, 123456, "physics", 30000, "science","full teacher")
+t1= Teacher("tashi", 30, 12345, "accounts", 30000, "commerce","assistant teacher")
+t2= Teacher("dorji", 31, 123456, "physics", 30000, "science","full teacher")
 
 s1= Student("penjor", 18, 1111, 12345,"bbi",1,3)
 s2= Student("karma", 19, 1112, 12346,"bbi",1,3.2)
@@ -71,3 +71,10 @@ else:
     print(s2.name,"is better than", s1.name)
     student_information= "year:"+ str(s2.year) +"course:" +s2.course
     print(student_information)
+
+Student_storage =[s1,s2]
+for std in Student_storage:
+    print(std.name)
+    print(std.gpa)
+    print(std.course)
+    print("=======")
